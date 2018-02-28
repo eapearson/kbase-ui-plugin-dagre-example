@@ -1,0 +1,31 @@
+## YAML Template.
+---
+package:
+    author: Erik Pearson
+    name: dagre-example
+    description: A simple plugin composed of just a top level panel
+source:
+    styles:
+        -
+            file: styles.css
+install:
+    widgets:
+        -
+            id: dagre-example_panel
+            module: panel
+            type: factory
+    routes:
+        -
+            path: [dagre-example]
+            queryParams: 
+                param1: {}
+            widget: dagre-example_panel
+            authorization: true
+    menu:
+        -
+            name: dagre-example
+            definition:
+                path: [dagre-example]
+                label: Dagre Example
+                icon: cutlery
+        
